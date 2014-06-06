@@ -13,20 +13,20 @@ V2SEPARATION_INIT = -2000
 MCP_INIT = 2000
 
 -- maximum values for voltage parameters
-PAC_MAX = -15000
+PAC_MAX = -17000
 V2SEPARATION_MAX = 2000
 MCP_MAX = 3500
 
 -- step size for voltage parameters
-PAC_STEP = -1000
+PAC_STEP = -200
 V2SEPARATION_STEP = 100
 MCP_STEP = -200
 
 -- detection box ranges in PA coordinates
-detectionBoxXMin = 58
-detectionBoxXMax = 64
-detectionBoxYMin = 35
-detectionBoxYMax = 47
+detectionBoxXMin = 116
+detectionBoxXMax = 128
+detectionBoxYMin = 70
+detectionBoxYMax = 94
 
 -- counters for data recording
 adjustable runNumber = 1 -- the current run
