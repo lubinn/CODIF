@@ -8,7 +8,7 @@
 simion.workbench_program()
 
 -- intial (minimum) values for voltage parameters
-PAC_INIT = -2000
+PAC_INIT = -000
 V2SEPARATION_INIT = -2000
 MCP_INIT = 2000
 
