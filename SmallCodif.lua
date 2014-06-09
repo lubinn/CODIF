@@ -6,20 +6,21 @@
 
 
 simion.workbench_program()
+--filecounter=1
 
 -- intial (minimum) values for voltage parameters
-PAC_INIT = -000
+PAC_INIT = -5000
 V2SEPARATION_INIT = -2000
 MCP_INIT = 2000
 
 -- maximum values for voltage parameters
-PAC_MAX = -17000
+PAC_MAX = -15000
 V2SEPARATION_MAX = 2000
 MCP_MAX = 3500
 
 -- step size for voltage parameters
-PAC_STEP = -200
-V2SEPARATION_STEP = 100
+PAC_STEP = -800
+V2SEPARATION_STEP = 200
 MCP_STEP = -200
 
 -- detection box ranges in PA coordinates
@@ -38,8 +39,12 @@ adjustable PAC = PAC_INIT
 adjustable V2Separation = V2SEPARATION_INIT
 adjustable MCP = MCP_INIT
 
+function get_filename(name)
+	filename = name
+end
+
 --file for recording data
-local filename = "testoutput.txt"
+local filename = "testoutput" .. tostring(filecounter) .. ".txt"
 io.output(filename)
 local f = assert(io.open(filename,"w"))
 f:write("Run,PAC,Coefficient,MCP,Hits,Total,Proportion \n")
